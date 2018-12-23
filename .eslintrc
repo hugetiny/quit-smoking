@@ -1,0 +1,20 @@
+{
+  "extends": ["o2team", "taro"],
+  "rules": {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "class-methods-use-this": "off",
+    "prefer-rest-params": "off",
+    "arrow-body-style": "warn",
+    "taro/custom-component-children": "off"
+  },
+  "parser": "babel-eslint"
+}
+//{
+//  "extends": ["taro"],
+//  "rules": {
+//    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+//    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+//  },
+//  "parser": "babel-eslint"
+//}
