@@ -20,7 +20,7 @@ export default class Info extends Component {
   };
 
 
-  handleAmount = (e) => {
+  onAmount = (e) => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -30,7 +30,7 @@ export default class Info extends Component {
     })
   };
 
-  handleUnitprice = (e) => {
+  onUnitprice = (e) => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -40,7 +40,7 @@ export default class Info extends Component {
     })
   };
 
-  handleUnitamount = (e) => {
+  onUnitamount = (e) => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -74,24 +74,24 @@ export default class Info extends Component {
 
   onShareAppMessage() {
     return {
-      title: 'show',
-      path: '/pages/index/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg'
+      title: '为了你爱的人，戒烟吧',
+      path: '/pages/quitSmoking/start/index',
+      imageUrl: 'http://img0.imgtn.bdimg.com/it/u=126893685,3679279521&fm=26&gp=0.jpg'
     }
-  };
+  }
 
   render() {
     const {amount, unitprice, unitamount, imgList} = this.props;
     return (
-      <View>
+      <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random()*3)].hoverURL}></Image>
         <View className='main'>
           <View className='panel'>
             <View className='component-item'>
               <AtForm>
-                <AtInput name='amount' title='支数' type='number' placeholder='每天吸烟支数' value={amount} onChange={this.handleAmount} />
-                <AtInput name='unitprice' title='单价' type='number' placeholder='香烟单价' value={unitprice} onChange={this.handleUnitprice} />
-                <AtInput name='unitamount' title='每包支数' type='number' placeholder='每包烟支数' value={unitamount} onChange={this.handleUnitamount} />
+                <AtInput name='amount' title='支数' type='number' placeholder='每天吸烟支数' value={amount} onChange={this.onAmount} />
+                <AtInput name='unitprice' title='单价' type='number' placeholder='香烟单价' value={unitprice} onChange={this.onUnitprice} />
+                <AtInput name='unitamount' title='每包支数' type='number' placeholder='每包烟支数' value={unitamount} onChange={this.onUnitamount} />
                 <View className='btn-item'>
                   <AtButton type='primary' onClick={this.onSubmit}>提交</AtButton>
                   <AtButton type='secondary' onClick={this.onBack}>返回</AtButton>

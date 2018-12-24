@@ -1,7 +1,7 @@
-
 //背景
-body{
+.body {
   background-color: rgb(0, 0, 0);
+  height: 100vh;
 }
 
 .background {
@@ -29,16 +29,16 @@ body{
     }
 
     .btn-item {
-      margin-top:2vh;
+      margin-top: 2vh;
+
       .at-button {
         margin-bottom: 2vh;
         font-weight: bold;
-        line-height: 1.7rem;
+        line-height: 6vh;
         color: #fff;
         background-color: rgba(0, 0, 0, 0.9);
         border: 3PX solid #fff;
       }
-
     }
 
     .at-form {
@@ -47,9 +47,11 @@ body{
       background-color: rgba(0, 0, 0, 0.9);
       position: relative;
       color: #fff;
+
       ::-webkit-input-placeholder {
-        color: #909;
+        color: #222;
       }
+
       .at-input {
         color: #fff;
 
@@ -69,9 +71,11 @@ body{
     .example-item__desc {
       font-size: 0.8rem;
       margin-top: 0.5rem;
+      position: relative;
     }
 
     .at-progress__content {
+      position: relative;
       color: #fff;
     }
 
@@ -79,16 +83,5 @@ body{
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 0;
     }
-
-    .taro-text {
-      position: relative;
-    }
-
-    .at-progress__content {
-      position: relative;
-    }
   }
 }
-
-
-

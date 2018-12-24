@@ -1,8 +1,9 @@
-import Taro from '@tarojs/taro';
+import Taro from '@tarojs/taro'
 
 export default {
   namespace: 'doing',
   state: {
+    lastsign: 0,
     openModal: false,
     days: 0,
     healthPercent: 0,
@@ -32,11 +33,13 @@ export default {
     },
     sign(state, {payload}) {
       // state.days =  Taro.getStorageSync('days')
+      state.lastsign = Date.parse(new Date())
+      Taro.setStorageSync('lastsign', state.lastsign)
       Taro.setStorageSync('days', state.days + 1)
       console.log(Taro.getStorageSync('unitamount'))
       console.log(state)
       state.healthPercent = parseInt(Taro.getStorageSync('unitamount') / 20 * state.days)
-      state.moneyPercent = parseInt(Taro.getStorageSync('unitprice') / Taro.getStorageSync('unitamount') * Taro.getStorageSync('amount') * state.days)
+      state.moneyPercent = parseInt(Taro.getStorageSync('unitprice') / Taro.getStorageSync('unitamount') * Taro.getStorageSync('amount') * state.days / 2)
       state.rewardPercent = state.days + 1
       Taro.showToast({
         title: `戒烟第${state.days}天`,
@@ -53,5 +56,4 @@ export default {
       return {...state, ...payload};
     },
   }
-
 };

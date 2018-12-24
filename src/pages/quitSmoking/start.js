@@ -1,11 +1,11 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View, Image } from '@tarojs/components'
-import { connect } from '@tarojs/redux'
-import { AtButton } from 'taro-ui'
+import Taro, {Component} from '@tarojs/taro'
+import {View, Image} from '@tarojs/components'
+import {connect} from '@tarojs/redux'
+import {AtButton} from 'taro-ui'
 import './index.scss'
 
 
-@connect(({ bg }) => ({
+@connect(({bg}) => ({
   ...bg,
 }))
 
@@ -13,14 +13,16 @@ export default class Start extends Component {
   config = {
     navigationBarTitleText: '戒烟'
   };
-  componentWillMount(){
-    if(Taro.getStorageSync('days')){
+
+  componentWillMount () {
+    if (Taro.getStorageSync('days')) {
       Taro.navigateTo({
         url: '/pages/quitSmoking/doing'
       })
     }
   };
-  componentDidMount(){
+
+  componentDidMount () {
 
   };
 
@@ -30,26 +32,26 @@ export default class Start extends Component {
   //   })
   // };
 
-  onStart () {
+  onStart() {
     Taro.navigateTo({
       url: '/pages/quitSmoking/info'
     })
   }
 
-  onShareAppMessage () {
+  onShareAppMessage() {
     return {
-      title: '戒烟',
+      title: '为了你爱的人，戒烟吧',
       path: '/pages/quitSmoking/start/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg'
+      imageUrl: 'http://img0.imgtn.bdimg.com/it/u=126893685,3679279521&fm=26&gp=0.jpg'
     }
   }
 
-  render () {
-    const { imgList } = this.props
+  render() {
+    const {imgList} = this.props
     console.log(this.props)
     return (
-      <View>
-        <Image className='background' src={imgList[Math.floor(Math.random()*3)].hoverURL}></Image>
+      <View className='body'>
+        <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>
 
 
         <View className='main'>
@@ -57,9 +59,9 @@ export default class Start extends Component {
             <View className='btn-item'>
               <AtButton type='secondary' onClick={this.onStart}>开始戒烟</AtButton>
             </View>
-             <View className='btn-item'>
-             <AtButton openType='share' type='primary'>帮助Ta戒烟</AtButton>
-             </View>
+            <View className='btn-item'>
+              <AtButton openType='share' type='primary'>帮助Ta戒烟</AtButton>
+            </View>
           </View>
         </View>
       </View>

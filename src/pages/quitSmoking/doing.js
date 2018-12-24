@@ -28,21 +28,27 @@ export default class Doing extends Component {
     this.props.dispatch({
       type: 'doing/save',
       payload: {
+        lastsign:Taro.getStorageSync('lastsign'),
         days: Taro.getStorageSync('days'),
         healthPercent: parseInt(Taro.getStorageSync('unitamount') / 20 * Taro.getStorageSync('days')),
         moneyPercent: parseInt(Taro.getStorageSync('unitprice') / Taro.getStorageSync('unitamount') * Taro.getStorageSync('amount') * Taro.getStorageSync('days') / 5),
         rewardPercent: Taro.getStorageSync('days')
       },
     })
+    // if(Date.parse(new Date()) - Taro.getStorageSync('lastsign')>= 864000000){
+    //   this.props.dispatch({
+    //     type: 'doing/allowSign'
+    //   };
+    // }
   };
 
   onShareAppMessage() {
     return {
-      title: 'Taro UI',
-      path: '/pages/index/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg'
+      title: '为了你爱的人，戒烟吧',
+      path: '/pages/quitSmoking/start/index',
+      imageUrl: 'http://img0.imgtn.bdimg.com/it/u=126893685,3679279521&fm=26&gp=0.jpg'
     }
-  };
+  }
   onOpenModal= () => {
     this.props.dispatch({
       type: 'doing/save',
@@ -88,11 +94,10 @@ export default class Doing extends Component {
     const {healthPercent, moneyPercent, rewardPercent, imgList} = this.props;
 
     return (
-      <View>
-
+      <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random()*3)].hoverURL}></Image>
         <View className='main'>
-          <OpenData type='userAvatarUrl'/>
+          {/*<OpenData type='userAvatarUrl'/>*/}
           <View className='panel panel-big'>
             <View>
               {/*<View className='panel__title'>状态</View>*/}
@@ -111,7 +116,11 @@ export default class Doing extends Component {
             </View>
 
             <View className='btn-item'>
-              <AtButton type='primary' onClick={this.onSign}>今天没吸烟</AtButton>
+              {Date.parse(new Date())-this.props.lastsign>=86400
+                ?<AtButton type='primary' onClick={this.onSign}>今天没吸烟</AtButton>
+                :<AtButton type='primary' >今天已签到</AtButton>
+              }
+
             </View>
 
             <View className='btn-item'>
@@ -122,19 +131,17 @@ export default class Doing extends Component {
 
             {this.state.showShare === true &&
             <View className='btn-item'>
-              <AtButton openType='share' type='primary'
-                        onClick={this.onShareAppMessage}
-              >分享战果</AtButton>
+              <AtButton openType='share' type='primary'>分享战果</AtButton>
             </View>
             }
           </View>
         </View>
         <AtModal
           isOpened={this.props.openModal}
-          // title='标题'
+          title='确认重新开始戒烟？'
           cancelText='取消'
           confirmText='确认'
-          content='确认重新开始戒烟？'
+          // content='确认重新开始戒烟？'
           onClose={this.onCloseModal}
           onCancel={this.onCloseModal}
           onConfirm={this.onConfirm}
