@@ -115,7 +115,9 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 ### 微信小程序开发文档
 
-> https://mp.weixin.qq.com/debug/wxadoc/dev
+> https://developers.weixin.qq.com/miniprogram/dev
+
+
 
 
 
@@ -123,7 +125,7 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 感谢支持真公益，我会及时更新赞助墙
 
-<img src="wechatsponse.jpg" width="200px" /> <img src="alipaysponse.jpg" width="200px" />
+<img src="wechatsponse.jpeg" width="200px" /> <img src="alipaysponse.jpeg" width="200px" />
 
 
 
