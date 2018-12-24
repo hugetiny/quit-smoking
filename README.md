@@ -120,12 +120,10 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 
 # 赞助
-![QRCode](https://raw.githubusercontent.com/hugetiny/quit-smoking/master/screenshots/alipaysponse.jpg)
-![QRCode](https://raw.githubusercontent.com/hugetiny/quit-smoking/master/screenshots/wechatsponse.jpg)
 
 感谢支持真公益，我会及时更新赞助墙
 
-<img src="wechatalipaysponse.jpg" width="200px" /> <img src="alipayalipaysponse.jpg" width="200px" />
+<img src="wechatsponse.jpg" width="200px" /> <img src="alipaysponse.jpg" width="200px" />
 
 
 
