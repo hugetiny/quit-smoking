@@ -109,7 +109,6 @@ export default class Doing extends Component {
 
   render() {
     const {healthPercent, moneyPercent, rewardPercent, imgList} = this.props
-
     return (
       <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>
@@ -133,9 +132,9 @@ export default class Doing extends Component {
             </View>
 
             <View className='btn-item'>
-              {Date.parse(new Date()) - this.props.lastsign >= 86400
-                ? <AtButton type='primary' onClick={this.onSign}>今天没吸烟</AtButton>
-                : <AtButton type='primary'>今天已签到</AtButton>
+              {Date.parse(new Date()) - this.props.lastsign >= 86400000
+                ? <AtButton type='primary' onClick={this.onSign}>坚持了1天</AtButton>
+                : <AtButton type='primary'>准备明天签到</AtButton>
               }
 
             </View>
@@ -145,7 +144,7 @@ export default class Doing extends Component {
             </View>
 
             <View className='btn-item'>
-              <AtButton openType='share' type='primary'>分享戒烟助助理</AtButton>
+              <AtButton openType='share' type='secondary'>分享戒烟助理</AtButton>
             </View>
 
           </View>
