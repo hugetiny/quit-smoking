@@ -1,12 +1,12 @@
 Quit smoking is a Taro&Taro UI Demo
 
-<img src="weappcode.jpeg" width="200px" />
+<img src="weappcode.jpg" width="200px" />
 
 目前Taro UI有onchange/oninput捕获不到的bug，如果是小程序用1.2.1，如果是H5用1.2.0
 快更新啊Taro-ui~!
 
 
-## 安装
+# 安装
 
 需要安装 `Taro` 开发工具 `@tarojs/cli`
 
@@ -40,7 +40,7 @@ $ taro build --type h5 --watch
 $ npx taro build --type h5 --watch
 ```
 
-## 适配进度
+# 适配进度
 
 - [x] H5 -- 完成
 - [x] 微信小程序 -- 完成
@@ -49,10 +49,6 @@ $ npx taro build --type h5 --watch
 - [ ] React Native -- TaroUI跟不上我也很无奈啊
 - [ ] 字节跳动小程序 -- 0%
 - [ ] 快应用 -- 0%
-
-## 目标功能
-
-- [x] 前台 -- 完成
 - [ ] 后台 -- 20%
 
 ## 技术栈
@@ -86,7 +82,6 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
     │   └── index.html
     ├── package.json
     └── template.js            // pages模版快速生成脚本,执行命令 npm run tep `文件名`
-
 
 
 
