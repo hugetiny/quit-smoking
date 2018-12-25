@@ -2,8 +2,8 @@
 	"name": "quit-smoking",
 	"version": "0.0.1",
 	"private": true,
-	"description": "戒烟",
-	"main": "index.js",
+	"description": "戒烟助理",
+	"main": "app.js",
 	"scripts": {
 		"dev:weapp": "npm run build:weapp -- --watch",
 		"dev:alipay": "npm run build:alipay -- --watch",
@@ -37,7 +37,7 @@
 		"redux": "^4.0.0",
 		"redux-logger": "^3.0.6",
 		"redux-thunk": "^2.3.0",
-		"taro-ui": "^1.5.2"
+		"taro-ui": "^1.5.3"
 	},
 	"devDependencies": {
 		"@tarojs/cli": "1.2.1",

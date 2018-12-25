@@ -1,9 +1,9 @@
-import Taro from '@tarojs/taro';
+import Taro from '@tarojs/taro'
 
 export default {
   namespace: 'common',
   state: {
-    access_token: "024b12087e6f0d2169c2665a6e127f9b"
+    access_token: '024b12087e6f0d2169c2665a6e127f9b'
     // mobile: Taro.getStorageSync('user_info') ? Taro.getStorageSync('user_info').mobile :'',
     // nickname: Taro.getStorageSync('user_info') ? Taro.getStorageSync('user_info').nickname :'',
     // new_user: Taro.getStorageSync('user_info') ? Taro.getStorageSync('user_info').new_user :'',
@@ -12,9 +12,9 @@ export default {
   },
 
   reducers: {
-    save(state, { payload }) {
-      return { ...state, ...payload };
+    save (state, { payload }) {
+      return { ...state, ...payload }
     },
   },
 
-};
+}

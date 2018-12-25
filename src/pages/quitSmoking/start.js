@@ -3,6 +3,7 @@ import {View, Image} from '@tarojs/components'
 import {connect} from '@tarojs/redux'
 import {AtButton} from 'taro-ui'
 import './index.scss'
+import '../../assets/images/logo.jpg'
 
 
 @connect(({bg}) => ({
@@ -11,20 +12,21 @@ import './index.scss'
 
 export default class Start extends Component {
   config = {
-    navigationBarTitleText: '戒烟'
+    navigationBarTitleText: '戒烟助理'
   };
 
-  componentWillMount () {
+  componentWillMount() {
+    console.log('startWillMount')
     if (Taro.getStorageSync('days')) {
       Taro.navigateTo({
         url: '/pages/quitSmoking/doing'
       })
     }
-  };
+  }
 
-  componentDidMount () {
-
-  };
+  // componentDidMount () {
+  //
+  // }
 
   // componentDidShow = () => {
   //   this.props.dispatch({
@@ -33,16 +35,19 @@ export default class Start extends Component {
   // };
 
   onStart() {
-    Taro.navigateTo({
-      url: '/pages/quitSmoking/info'
-    })
+    if (!Taro.getStorageSync('days')){
+      Taro.navigateTo({
+        url: '/pages/quitSmoking/info'
+      })
+    }
   }
 
+// 微信相关
   onShareAppMessage() {
     return {
-      title: '为了你爱的人，戒烟吧',
+      title: '为了爱你和你爱的人，戒烟助手送给你',
       path: '/pages/quitSmoking/start/index',
-      imageUrl: 'http://img0.imgtn.bdimg.com/it/u=126893685,3679279521&fm=26&gp=0.jpg'
+      imageUrl: '../../assets/images/logo.jpg'
     }
   }
 

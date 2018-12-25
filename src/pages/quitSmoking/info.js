@@ -1,26 +1,26 @@
-import Taro, {Component} from '@tarojs/taro'
-import {View, Image} from '@tarojs/components'
-import {connect} from '@tarojs/redux';
-import {AtButton, AtInput, AtForm} from "taro-ui";
+import Taro, { Component } from '@tarojs/taro'
+import { View, Image } from '@tarojs/components'
+import { connect } from '@tarojs/redux'
+import { AtButton, AtInput, AtForm } from 'taro-ui'
 import './index.scss'
 
 
-@connect(({bg, info}) => ({
+@connect(({ bg, info }) => ({
   ...bg,
   ...info,
 }))
 
 export default class Info extends Component {
   config = {
-    navigationBarTitleText: '戒烟'
+    navigationBarTitleText: '戒烟助理'
   };
 
-  componentWillMount(){
+  componentWillMount () {
 
-  };
+  }
 
 
-  onAmount = (e) => {
+  onAmount = e => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -30,7 +30,7 @@ export default class Info extends Component {
     })
   };
 
-  onUnitprice = (e) => {
+  onUnitprice = e => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -40,7 +40,7 @@ export default class Info extends Component {
     })
   };
 
-  onUnitamount = (e) => {
+  onUnitamount = e => {
     console.log(e)
     this.props.dispatch({
       type: 'info/save',
@@ -62,29 +62,20 @@ export default class Info extends Component {
         url: '/pages/quitSmoking/doing'
       })
     } else {
-      Taro.showModal({content: `请输入评估信息`, showCancel: false})
+      Taro.showModal({ content: `请输入评估信息`, showCancel: false })
     }
   };
 
 
-  onBack() {
+  onBack () {
     Taro.navigateBack()
-  };
-
-
-  onShareAppMessage() {
-    return {
-      title: '为了你爱的人，戒烟吧',
-      path: '/pages/quitSmoking/start/index',
-      imageUrl: 'http://img0.imgtn.bdimg.com/it/u=126893685,3679279521&fm=26&gp=0.jpg'
-    }
   }
 
-  render() {
-    const {amount, unitprice, unitamount, imgList} = this.props;
+  render () {
+    const { amount, unitprice, unitamount, imgList } = this.props
     return (
       <View className='body'>
-        <Image className='background' src={imgList[Math.floor(Math.random()*3)].hoverURL}></Image>
+        <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>
         <View className='main'>
           <View className='panel'>
             <View className='component-item'>

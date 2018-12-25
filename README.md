@@ -41,9 +41,6 @@ $ npx taro build --type h5 --watch
 
 
 
-
-
-
 # 技术栈
 
 React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
@@ -51,8 +48,8 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 ## 适配进度
 
-- [x] H5 -- 90%
-- [x] 微信小程序 -- 95%
+- [x] H5 -- 完成
+- [x] 微信小程序 -- 完成
 - [ ] 支付宝小程序 -- 25%
 - [ ] 百度小程序 -- 25%
 - [ ] React Native -- TaroUI跟不上我也很无奈啊
@@ -70,17 +67,15 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
     ├── .temp                  // H5编译结果目录
     ├── .rn_temp               // RN编译结果目录
-    ├── dist                   // 小程序编译结果目录
+    ├── dist                   // 小程序编译结果目录,目前所有平台小程序都会打包到这里
     ├── config                 // Taro配置目录
     │   ├── dev.js                 // 开发时配置
     │   ├── index.js               // 默认配置
     │   └── prod.js                // 打包时配置
-    ├── screenshots            // 项目截图，和项目开发无关
-    ├── site                   // H5静态文件（打包文件）
     ├── src                    // 源码目录
-    │   ├── components             // 组件
+    │   ├── components             // 公共组件
     │   ├── config                 // 项目开发配置
-    │   ├── images                 // 图片文件
+    │   ├── assets                 // 静态文件
     │   ├── models                 // redux models
     │   ├── pages                  // 页面文件目录
     │   │   └── home
@@ -103,7 +98,7 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 ### Taro开发文档
 
-> https://nervjs.github.io/taro/docs/README.html
+> https://nervjs.github.io
 
 ### dva开发文档
 
@@ -117,7 +112,17 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 > https://developers.weixin.qq.com/miniprogram/dev
 
+### 支付宝小程序开发文档
 
+> https://docs.alipay.com/mini/developer/
+
+### 钉钉小程序开发文档
+
+> https://open-doc.dingtalk.com/
+
+### 百度小程序开发文档
+
+> https://smartprogram.baidu.com/docs/develop/tutorial/codedir/
 
 
 
