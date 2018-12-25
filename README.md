@@ -1,7 +1,8 @@
 Quit smoking is a Taro&Taro UI Demo
 
-目前Taro UI有onchange/oninput捕获不到的bug，如果是小程序用1.2.1，如果是H5用1.2.0
+<img src="weappcode.jpeg" width="200px" />
 
+目前Taro UI有onchange/oninput捕获不到的bug，如果是小程序用1.2.1，如果是H5用1.2.0
 快更新啊Taro-ui~!
 
 
@@ -39,13 +40,6 @@ $ taro build --type h5 --watch
 $ npx taro build --type h5 --watch
 ```
 
-
-
-# 技术栈
-
-React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
-
-
 ## 适配进度
 
 - [x] H5 -- 完成
@@ -61,7 +55,11 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 - [x] 前台 -- 完成
 - [ ] 后台 -- 20%
 
-# 业务介绍
+## 技术栈
+
+React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
+
+## 业务介绍
 
 目录结构
 
@@ -130,7 +128,8 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
 
 感谢支持真公益，我会及时更新赞助墙
 
-<img src="wechatsponse.jpeg" width="200px" /> <img src="alipaysponse.jpeg" width="200px" />
+<img src="wechatsponse.jpeg" width="200px" /> 
+<img src="alipaysponse.jpeg" width="200px" />
 
 
 
