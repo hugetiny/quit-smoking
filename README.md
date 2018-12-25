@@ -1,6 +1,8 @@
 Quit smoking is a Taro&Taro UI Demo
-
 <img src="weappcode.jpg" width="200px" />
+
+Quit smoking的诞生
+<img src="quit-smoking.gif" width="480px" />
 
 目前Taro UI有onchange/oninput捕获不到的bug，如果是小程序用1.2.1，如果是H5用1.2.0
 快更新啊Taro-ui~!
