@@ -45,8 +45,8 @@ export default class Start extends Component {
 // 微信相关
   onShareAppMessage() {
     return {
-      title: '为了爱你和你爱的人，戒烟助手送给你',
-      path: '/pages/quitSmoking/start/index',
+      title: '为了爱你和你爱的人，戒烟助理送给你',
+      // path: '/pages/quitSmoking/start/index',
       imageUrl: '../../assets/images/logo.jpg'
     }
   }
@@ -57,8 +57,6 @@ export default class Start extends Component {
     return (
       <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>
-
-
         <View className='main'>
           <View className='panel'>
             <View className='btn-item'>

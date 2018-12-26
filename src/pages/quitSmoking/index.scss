@@ -17,19 +17,18 @@
   .panel {
     color: #fff;
     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    margin-top: -65vh;
     padding: 1rem;
+    margin-top: -70vh;
+    &.panel-big {
+      margin-top: -100vh;
+    }
 
     .panel__content {
       margin-bottom: 5vh;
     }
 
-    &.panel-big {
-      margin-top: -85vh;
-    }
-
     .btn-item {
-      margin-top: 2vh;
+      margin-top: 5vh;
 
       .at-button {
         margin-bottom: 2vh;
@@ -83,5 +82,15 @@
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 0;
     }
+    .avatar {
+      margin: 2vh auto;
+      .at-avatar {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        line-height: inherit;
+      }
+    }
+
   }
 }

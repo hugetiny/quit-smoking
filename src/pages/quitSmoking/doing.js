@@ -1,7 +1,7 @@
 import Taro, {Component} from '@tarojs/taro'
-import {View, Image, Text, OpenData} from '@tarojs/components'
+import {View, Image, Text} from '@tarojs/components'
 import {connect} from '@tarojs/redux'
-import {AtButton, AtProgress, AtModal, AtCountDown} from 'taro-ui'
+import {AtButton, AtProgress, AtModal, AtAvatar} from 'taro-ui'
 import './index.scss'
 
 @connect(({bg, doing}) => ({
@@ -101,8 +101,8 @@ export default class Doing extends Component {
   // 微信相关
   onShareAppMessage() {
     return {
-      title: '为了爱你和你爱的人，戒烟助手送给你',
-      path: '/pages/quitSmoking/start/index',
+      title: '为了爱你和你爱的人，戒烟助理送给你',
+      // path: '/pages/quitSmoking/start/index',
       imageUrl: '/assets/images/logo.jpg'
     }
   }
@@ -113,8 +113,16 @@ export default class Doing extends Component {
       <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>
         <View className='main'>
-          {/* <OpenData type='userAvatarUrl'/> */}
+
           <View className='panel panel-big'>
+            {/* openData 头像（仅微信小程序支持） */}
+            {Taro.getEnv() === Taro.ENV_TYPE.WEAPP &&
+            <View className='avatar at-row at-row__justify--center'>
+              <View className='at-col at-col-3'>
+                <AtAvatar circle openData={{type: 'userAvatarUrl'}}></AtAvatar>
+              </View>
+            </View>
+            }
             <View>
               {/* <View className='panel__title'>状态</View> */}
               <View className='panel__content'>
