@@ -5,7 +5,6 @@
 <img src="quit-smoking.gif" width="480px" />
 
 
-
 # 安装
 
 需要安装 `Taro` 开发工具 `@tarojs/cli`
@@ -46,10 +45,9 @@ $ npx taro build --type h5 --watch
 - [x] 微信小程序 -- 完成
 - [ ] 支付宝小程序 -- 25%
 - [ ] 百度小程序 -- 25%
-- [ ] React Native -- TaroUI跟不上我也很无奈啊
+- [ ] React Native -- Taro匹配RN优先级是最低的，要等
 - [ ] 字节跳动小程序 -- 0%
 - [ ] 快应用 -- 0%
-- [ ] 后台 -- 20%
 
 ## 技术栈
 
@@ -80,8 +78,7 @@ React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
     │   ├── utils              // 常用工具类
     │   ├── app.js             // 入口文件
     │   └── index.html
-    ├── package.json
-    └── template.js            // pages模版快速生成脚本,执行命令 npm run tep `文件名`
+    └── package.json
 
 
 
