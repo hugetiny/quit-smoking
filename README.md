@@ -51,7 +51,7 @@ $ npx taro build --type h5 --watch
 
 ## 技术栈
 
-React + Taro + Taro UI + Dva(mobx目前兼容性不行) + Scss + ES6/ES7
+React + Taro + Taro UI + Dva + Scss + ES6/ES7
 
 ## 业务介绍
 
