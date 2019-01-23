@@ -29,7 +29,7 @@ $ npx taro build --type weapp --watch
 ```
 
 **H5 编译预览模式**
-
+taro
 ```bash
 # npm script
 $ npm run dev:h5
@@ -43,7 +43,7 @@ $ npx taro build --type h5 --watch
 
 - [x] H5 -- 完成
 - [x] 微信小程序 -- 完成
-- [ ] 支付宝小程序 -- 25%
+- [ ] 支付宝小程序 -- 95%
 - [ ] 百度小程序 -- 25%
 - [ ] React Native -- Taro匹配RN优先级是最低的，要等
 - [ ] 字节跳动小程序 -- 0%
@@ -117,9 +117,6 @@ React + Taro + Taro UI + Dva + Scss + ES6/ES7
 
 
 # 赞助
-
-感谢支持真公益，我会及时更新赞助墙
-
 <img src="wechatsponse.jpeg" width="200px" /> 
 <img src="alipaysponse.jpeg" width="200px" />
 
