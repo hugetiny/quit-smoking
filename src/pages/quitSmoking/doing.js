@@ -1,10 +1,10 @@
-import Taro, {Component} from '@tarojs/taro'
-import {View, Image, Text} from '@tarojs/components'
-import {connect} from '@tarojs/redux'
-import {AtButton, AtProgress, AtModal, AtAvatar} from 'taro-ui'
+import Taro, { Component } from '@tarojs/taro'
+import { View, Image, Text } from '@tarojs/components'
+import { connect } from '@tarojs/redux'
+import { AtButton, AtProgress, AtModal, AtAvatar } from 'taro-ui'
 import './index.scss'
 
-@connect(({bg, doing}) => ({
+@connect(({ bg, doing }) => ({
   ...bg,
   ...doing,
 }))
@@ -23,7 +23,7 @@ export default class Doing extends Component {
   //   }
   // }
 
-  componentWillMount() {
+  componentWillMount () {
     console.log('doingWillMount')
     this.props.dispatch({
       type: 'doing/save',
@@ -99,7 +99,7 @@ export default class Doing extends Component {
   };
 
   // 微信相关
-  onShareAppMessage() {
+  onShareAppMessage () {
     return {
       title: '为了爱你和你爱的人，戒烟助理送给你',
       // path: '/pages/quitSmoking/start/index',
@@ -107,8 +107,8 @@ export default class Doing extends Component {
     }
   }
 
-  render() {
-    const {healthPercent, moneyPercent, rewardPercent, imgList} = this.props
+  render () {
+    const { healthPercent, moneyPercent, rewardPercent, imgList } = this.props
     return (
       <View className='body'>
         <Image className='background' src={imgList[Math.floor(Math.random() * 3)].hoverURL}></Image>

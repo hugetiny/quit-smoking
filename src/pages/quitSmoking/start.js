@@ -1,12 +1,12 @@
-import Taro, {Component} from '@tarojs/taro'
-import {View, Image} from '@tarojs/components'
-import {connect} from '@tarojs/redux'
-import {AtButton} from 'taro-ui'
+import Taro, { Component } from '@tarojs/taro'
+import { View, Image } from '@tarojs/components'
+import { connect } from '@tarojs/redux'
+import { AtButton } from 'taro-ui'
 import './index.scss'
 import '../../assets/images/logo.jpg'
 
 
-@connect(({bg}) => ({
+@connect(({ bg }) => ({
   ...bg,
 }))
 
@@ -15,7 +15,7 @@ export default class Start extends Component {
     navigationBarTitleText: '戒烟助理'
   };
 
-  componentWillMount() {
+  componentWillMount () {
     console.log('startWillMount')
     if (Taro.getStorageSync('days')) {
       Taro.navigateTo({
@@ -34,16 +34,16 @@ export default class Start extends Component {
   //   })
   // };
 
-  onStart() {
-    if (!Taro.getStorageSync('days')){
+  onStart () {
+    if (!Taro.getStorageSync('days')) {
       Taro.navigateTo({
         url: '/pages/quitSmoking/info'
       })
     }
   }
 
-// 微信相关
-  onShareAppMessage() {
+  // 微信相关
+  onShareAppMessage () {
     return {
       title: '为了爱你和你爱的人，戒烟助理送给你',
       // path: '/pages/quitSmoking/start/index',
@@ -51,8 +51,8 @@ export default class Start extends Component {
     }
   }
 
-  render() {
-    const {imgList} = this.props
+  render () {
+    const { imgList } = this.props
     console.log(this.props)
     return (
       <View className='body'>
