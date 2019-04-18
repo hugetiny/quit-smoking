@@ -1,6 +1,8 @@
 import '@tarojs/async-await'
-import Taro, {Component} from '@tarojs/taro'
-import {Provider} from '@tarojs/redux'
+import Taro, { Component } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
+
+import 'taro-ui/dist/style/index.scss'
 
 import dva from './utils/dva'
 import models from './models'
@@ -10,11 +12,7 @@ import Start from './pages/quitSmoking/start'
 
 
 // import './app.scss'
-if (process.env.TARO_ENV === 'weapp') {
-  require('taro-ui/dist/weapp/css/index.css')
-} else if (process.env.TARO_ENV === 'h5') {
-  require('taro-ui/dist/h5/css/index.css')
-}
+
 
 const dvaApp = dva.createApp({
   initialState: {},
@@ -65,7 +63,7 @@ class App extends Component {
   // componentDidHide () {
   // }
 
-  render() {
+  render () {
     return (<Provider store={store}>
       <Start />
     </Provider>)
