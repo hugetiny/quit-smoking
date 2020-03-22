@@ -120,6 +120,7 @@ React + Taro + Taro UI + Dva + Scss + ES6/ES7
 
 <img src="wechatsponse.jpeg" width="200px" /> 
 <img src="alipaysponse.jpeg" width="200px" />
+
 Taro UI一直不支持RN这点让我放弃了继续维护的动力
 一个官方的UI框架都不能支持自己官方本身所支持的框架的话，那真的很鸡肋
 
