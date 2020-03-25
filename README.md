@@ -122,6 +122,6 @@ React + Taro + Taro UI + Dva + Scss + ES6/ES7
 <img src="alipaysponse.jpeg" width="200px" />
 
 Taro UI一直不支持RN这点让我放弃了继续维护的动力
-一个官方的UI框架都不能支持自己官方本身所支持的框架的话，那真的很鸡肋
+一个官方的UI框架都不能完全支持官方本身的框架的话，那真的很鸡肋
 
 
